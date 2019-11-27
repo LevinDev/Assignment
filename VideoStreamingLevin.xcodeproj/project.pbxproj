@@ -1,0 +1,562 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A41BA836238AEC1B00CD8581 /* Stream.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41BA835238AEC1B00CD8581 /* Stream.swift */; };
+		A41BA839238AECA300CD8581 /* CellProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41BA838238AECA300CD8581 /* CellProtocols.swift */; };
+		A41BA83C238AEE9500CD8581 /* StreamViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41BA83B238AEE9500CD8581 /* StreamViewModel.swift */; };
+		A41BA83F238C2FF100CD8581 /* VideoFullscreenTransitioner.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41BA83D238C2FF100CD8581 /* VideoFullscreenTransitioner.swift */; };
+		A41BA840238C2FF100CD8581 /* VideoFullscreenPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41BA83E238C2FF100CD8581 /* VideoFullscreenPlayerView.swift */; };
+		A41BA843238C312100CD8581 /* StreamFullScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41BA841238C312100CD8581 /* StreamFullScreenController.swift */; };
+		A41BA844238C312100CD8581 /* StreamFullScreenController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A41BA842238C312100CD8581 /* StreamFullScreenController.xib */; };
+		A41BA846238F13E500CD8581 /* StreamCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A41BA845238F13E500CD8581 /* StreamCollectionCell.xib */; };
+		BB8D53D0238A8C2400C0F8E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8D53CF238A8C2400C0F8E5 /* AppDelegate.swift */; };
+		BB8D53D2238A8C2400C0F8E5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8D53D1238A8C2400C0F8E5 /* ViewController.swift */; };
+		BB8D53D5238A8C2400C0F8E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB8D53D3238A8C2400C0F8E5 /* Main.storyboard */; };
+		BB8D53D7238A8C2600C0F8E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB8D53D6238A8C2600C0F8E5 /* Assets.xcassets */; };
+		BB8D53DA238A8C2600C0F8E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB8D53D8238A8C2600C0F8E5 /* LaunchScreen.storyboard */; };
+		BB8D53E5238A8C2600C0F8E5 /* VideoStreamingLevinTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8D53E4238A8C2600C0F8E5 /* VideoStreamingLevinTests.swift */; };
+		BB8D53F2238A953600C0F8E5 /* StreamListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8D53F1238A953600C0F8E5 /* StreamListCell.swift */; };
+		BB8D53F4238A9FFE00C0F8E5 /* StreamThumbnailGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8D53F3238A9FFE00C0F8E5 /* StreamThumbnailGenerator.swift */; };
+		BB8D53F6238AB2BD00C0F8E5 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8D53F5238AB2BD00C0F8E5 /* DetailViewController.swift */; };
+		BBBEBAC2238BC46400E888D1 /* LVPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBEBAC1238BC46400E888D1 /* LVPlayer.swift */; };
+		BBBEBAC4238BC4E100E888D1 /* LVPlayer.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBBEBAC3238BC4E100E888D1 /* LVPlayer.xib */; };
+		BBBEBAC6238BE0C300E888D1 /* PlayerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBEBAC5238BE0C300E888D1 /* PlayerState.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BB8D53E1238A8C2600C0F8E5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BB8D53C4238A8C2400C0F8E5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BB8D53CB238A8C2400C0F8E5;
+			remoteInfo = VideoStreamingLevin;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A41BA835238AEC1B00CD8581 /* Stream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stream.swift; sourceTree = "<group>"; };
+		A41BA838238AECA300CD8581 /* CellProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellProtocols.swift; sourceTree = "<group>"; };
+		A41BA83B238AEE9500CD8581 /* StreamViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamViewModel.swift; sourceTree = "<group>"; };
+		A41BA83D238C2FF100CD8581 /* VideoFullscreenTransitioner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoFullscreenTransitioner.swift; sourceTree = "<group>"; };
+		A41BA83E238C2FF100CD8581 /* VideoFullscreenPlayerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoFullscreenPlayerView.swift; sourceTree = "<group>"; };
+		A41BA841238C312100CD8581 /* StreamFullScreenController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamFullScreenController.swift; sourceTree = "<group>"; };
+		A41BA842238C312100CD8581 /* StreamFullScreenController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StreamFullScreenController.xib; sourceTree = "<group>"; };
+		A41BA845238F13E500CD8581 /* StreamCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StreamCollectionCell.xib; sourceTree = "<group>"; };
+		BB8D53CC238A8C2400C0F8E5 /* VideoStreamingLevin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VideoStreamingLevin.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB8D53CF238A8C2400C0F8E5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BB8D53D1238A8C2400C0F8E5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BB8D53D4238A8C2400C0F8E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BB8D53D6238A8C2600C0F8E5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BB8D53D9238A8C2600C0F8E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BB8D53DB238A8C2600C0F8E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BB8D53E0238A8C2600C0F8E5 /* VideoStreamingLevinTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VideoStreamingLevinTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB8D53E4238A8C2600C0F8E5 /* VideoStreamingLevinTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoStreamingLevinTests.swift; sourceTree = "<group>"; };
+		BB8D53E6238A8C2600C0F8E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BB8D53F1238A953600C0F8E5 /* StreamListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamListCell.swift; sourceTree = "<group>"; };
+		BB8D53F3238A9FFE00C0F8E5 /* StreamThumbnailGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamThumbnailGenerator.swift; sourceTree = "<group>"; };
+		BB8D53F5238AB2BD00C0F8E5 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		BBBEBAC1238BC46400E888D1 /* LVPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LVPlayer.swift; sourceTree = "<group>"; };
+		BBBEBAC3238BC4E100E888D1 /* LVPlayer.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LVPlayer.xib; sourceTree = "<group>"; };
+		BBBEBAC5238BE0C300E888D1 /* PlayerState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerState.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BB8D53C9238A8C2400C0F8E5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB8D53DD238A8C2600C0F8E5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A41BA834238AEBDC00CD8581 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A41BA835238AEC1B00CD8581 /* Stream.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A41BA837238AEC7700CD8581 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				A41BA838238AECA300CD8581 /* CellProtocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		A41BA83A238AEDC300CD8581 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A41BA83B238AEE9500CD8581 /* StreamViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		BB8D53C3238A8C2400C0F8E5 = {
+			isa = PBXGroup;
+			children = (
+				BB8D53CE238A8C2400C0F8E5 /* VideoStreamingLevin */,
+				BB8D53E3238A8C2600C0F8E5 /* VideoStreamingLevinTests */,
+				BB8D53CD238A8C2400C0F8E5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BB8D53CD238A8C2400C0F8E5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BB8D53CC238A8C2400C0F8E5 /* VideoStreamingLevin.app */,
+				BB8D53E0238A8C2600C0F8E5 /* VideoStreamingLevinTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BB8D53CE238A8C2400C0F8E5 /* VideoStreamingLevin */ = {
+			isa = PBXGroup;
+			children = (
+				A41BA837238AEC7700CD8581 /* Protocols */,
+				A41BA834238AEBDC00CD8581 /* Model */,
+				BB8D53F3238A9FFE00C0F8E5 /* StreamThumbnailGenerator.swift */,
+				BB8D53EF238A950200C0F8E5 /* Views */,
+				A41BA83A238AEDC300CD8581 /* ViewModel */,
+				BB8D53CF238A8C2400C0F8E5 /* AppDelegate.swift */,
+				BB8D53D1238A8C2400C0F8E5 /* ViewController.swift */,
+				BB8D53F5238AB2BD00C0F8E5 /* DetailViewController.swift */,
+				BB8D53D3238A8C2400C0F8E5 /* Main.storyboard */,
+				BB8D53D6238A8C2600C0F8E5 /* Assets.xcassets */,
+				BB8D53D8238A8C2600C0F8E5 /* LaunchScreen.storyboard */,
+				BB8D53DB238A8C2600C0F8E5 /* Info.plist */,
+			);
+			path = VideoStreamingLevin;
+			sourceTree = "<group>";
+		};
+		BB8D53E3238A8C2600C0F8E5 /* VideoStreamingLevinTests */ = {
+			isa = PBXGroup;
+			children = (
+				BB8D53E4238A8C2600C0F8E5 /* VideoStreamingLevinTests.swift */,
+				BB8D53E6238A8C2600C0F8E5 /* Info.plist */,
+			);
+			path = VideoStreamingLevinTests;
+			sourceTree = "<group>";
+		};
+		BB8D53EF238A950200C0F8E5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BBBEBAC0238BC40300E888D1 /* Player */,
+				BB8D53F1238A953600C0F8E5 /* StreamListCell.swift */,
+				A41BA845238F13E500CD8581 /* StreamCollectionCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BBBEBAC0238BC40300E888D1 /* Player */ = {
+			isa = PBXGroup;
+			children = (
+				A41BA841238C312100CD8581 /* StreamFullScreenController.swift */,
+				A41BA842238C312100CD8581 /* StreamFullScreenController.xib */,
+				A41BA83E238C2FF100CD8581 /* VideoFullscreenPlayerView.swift */,
+				A41BA83D238C2FF100CD8581 /* VideoFullscreenTransitioner.swift */,
+				BBBEBAC1238BC46400E888D1 /* LVPlayer.swift */,
+				BBBEBAC3238BC4E100E888D1 /* LVPlayer.xib */,
+				BBBEBAC5238BE0C300E888D1 /* PlayerState.swift */,
+			);
+			path = Player;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BB8D53CB238A8C2400C0F8E5 /* VideoStreamingLevin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BB8D53E9238A8C2600C0F8E5 /* Build configuration list for PBXNativeTarget "VideoStreamingLevin" */;
+			buildPhases = (
+				BB8D53C8238A8C2400C0F8E5 /* Sources */,
+				BB8D53C9238A8C2400C0F8E5 /* Frameworks */,
+				BB8D53CA238A8C2400C0F8E5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VideoStreamingLevin;
+			productName = VideoStreamingLevin;
+			productReference = BB8D53CC238A8C2400C0F8E5 /* VideoStreamingLevin.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BB8D53DF238A8C2600C0F8E5 /* VideoStreamingLevinTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BB8D53EC238A8C2600C0F8E5 /* Build configuration list for PBXNativeTarget "VideoStreamingLevinTests" */;
+			buildPhases = (
+				BB8D53DC238A8C2600C0F8E5 /* Sources */,
+				BB8D53DD238A8C2600C0F8E5 /* Frameworks */,
+				BB8D53DE238A8C2600C0F8E5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BB8D53E2238A8C2600C0F8E5 /* PBXTargetDependency */,
+			);
+			name = VideoStreamingLevinTests;
+			productName = VideoStreamingLevinTests;
+			productReference = BB8D53E0238A8C2600C0F8E5 /* VideoStreamingLevinTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BB8D53C4238A8C2400C0F8E5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = "Levin Varghese";
+				TargetAttributes = {
+					BB8D53CB238A8C2400C0F8E5 = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+					BB8D53DF238A8C2600C0F8E5 = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = BB8D53CB238A8C2400C0F8E5;
+					};
+				};
+			};
+			buildConfigurationList = BB8D53C7238A8C2400C0F8E5 /* Build configuration list for PBXProject "VideoStreamingLevin" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BB8D53C3238A8C2400C0F8E5;
+			productRefGroup = BB8D53CD238A8C2400C0F8E5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BB8D53CB238A8C2400C0F8E5 /* VideoStreamingLevin */,
+				BB8D53DF238A8C2600C0F8E5 /* VideoStreamingLevinTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BB8D53CA238A8C2400C0F8E5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BBBEBAC4238BC4E100E888D1 /* LVPlayer.xib in Resources */,
+				A41BA846238F13E500CD8581 /* StreamCollectionCell.xib in Resources */,
+				A41BA844238C312100CD8581 /* StreamFullScreenController.xib in Resources */,
+				BB8D53DA238A8C2600C0F8E5 /* LaunchScreen.storyboard in Resources */,
+				BB8D53D7238A8C2600C0F8E5 /* Assets.xcassets in Resources */,
+				BB8D53D5238A8C2400C0F8E5 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB8D53DE238A8C2600C0F8E5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BB8D53C8238A8C2400C0F8E5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BBBEBAC6238BE0C300E888D1 /* PlayerState.swift in Sources */,
+				A41BA83C238AEE9500CD8581 /* StreamViewModel.swift in Sources */,
+				BB8D53F4238A9FFE00C0F8E5 /* StreamThumbnailGenerator.swift in Sources */,
+				A41BA836238AEC1B00CD8581 /* Stream.swift in Sources */,
+				A41BA840238C2FF100CD8581 /* VideoFullscreenPlayerView.swift in Sources */,
+				BB8D53D2238A8C2400C0F8E5 /* ViewController.swift in Sources */,
+				BB8D53F6238AB2BD00C0F8E5 /* DetailViewController.swift in Sources */,
+				BBBEBAC2238BC46400E888D1 /* LVPlayer.swift in Sources */,
+				BB8D53F2238A953600C0F8E5 /* StreamListCell.swift in Sources */,
+				A41BA839238AECA300CD8581 /* CellProtocols.swift in Sources */,
+				BB8D53D0238A8C2400C0F8E5 /* AppDelegate.swift in Sources */,
+				A41BA843238C312100CD8581 /* StreamFullScreenController.swift in Sources */,
+				A41BA83F238C2FF100CD8581 /* VideoFullscreenTransitioner.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB8D53DC238A8C2600C0F8E5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB8D53E5238A8C2600C0F8E5 /* VideoStreamingLevinTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BB8D53E2238A8C2600C0F8E5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BB8D53CB238A8C2400C0F8E5 /* VideoStreamingLevin */;
+			targetProxy = BB8D53E1238A8C2600C0F8E5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BB8D53D3238A8C2400C0F8E5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BB8D53D4238A8C2400C0F8E5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BB8D53D8238A8C2600C0F8E5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BB8D53D9238A8C2600C0F8E5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BB8D53E7238A8C2600C0F8E5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BB8D53E8238A8C2600C0F8E5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BB8D53EA238A8C2600C0F8E5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = VideoStreamingLevin/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.VideoStreamingLevin;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BB8D53EB238A8C2600C0F8E5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = VideoStreamingLevin/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.VideoStreamingLevin;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		BB8D53ED238A8C2600C0F8E5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = VideoStreamingLevinTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.VideoStreamingLevinTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VideoStreamingLevin.app/VideoStreamingLevin";
+			};
+			name = Debug;
+		};
+		BB8D53EE238A8C2600C0F8E5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = VideoStreamingLevinTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.VideoStreamingLevinTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VideoStreamingLevin.app/VideoStreamingLevin";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BB8D53C7238A8C2400C0F8E5 /* Build configuration list for PBXProject "VideoStreamingLevin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BB8D53E7238A8C2600C0F8E5 /* Debug */,
+				BB8D53E8238A8C2600C0F8E5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BB8D53E9238A8C2600C0F8E5 /* Build configuration list for PBXNativeTarget "VideoStreamingLevin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BB8D53EA238A8C2600C0F8E5 /* Debug */,
+				BB8D53EB238A8C2600C0F8E5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BB8D53EC238A8C2600C0F8E5 /* Build configuration list for PBXNativeTarget "VideoStreamingLevinTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BB8D53ED238A8C2600C0F8E5 /* Debug */,
+				BB8D53EE238A8C2600C0F8E5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BB8D53C4238A8C2400C0F8E5 /* Project object */;
+}

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StreamFullScreenController" customModule="VideoStreamingLevin" customModuleProvider="target">
+            <connections>
+                <outlet property="btnClose" destination="lEv-9A-gmU" id="Bz7-18-Zmi"/>
+                <outlet property="collectionView" destination="bi3-Mg-IYU" id="y1i-tr-LRE"/>
+                <outlet property="fullscreenPlayerView" destination="qV7-EG-KxK" id="0Dc-R6-k9R"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qV7-EG-KxK" customClass="VideoFullscreenPlayerView" customModule="VideoStreamingLevin" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lEv-9A-gmU">
+                    <rect key="frame" x="20" y="96" width="64" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="HeY-Dy-XJa"/>
+                        <constraint firstAttribute="width" constant="64" id="ruc-q4-y9l"/>
+                    </constraints>
+                    <state key="normal" title="Close">
+                        <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="tapClose:" destination="-1" eventType="touchUpInside" id="dsy-mA-Kcn"/>
+                    </connections>
+                </button>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="bi3-Mg-IYU">
+                    <rect key="frame" x="1" y="714" width="412" height="128"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="128" id="mp8-oP-rXR"/>
+                    </constraints>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="xuy-Py-KT6">
+                        <size key="itemSize" width="125" height="125"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="au6-YQ-BkQ"/>
+                        <outlet property="delegate" destination="-1" id="VBd-Vp-m2F"/>
+                    </connections>
+                </collectionView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="lEv-9A-gmU" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="0cR-Lg-chd"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="bi3-Mg-IYU" secondAttribute="trailing" constant="1" id="9Cf-3D-Yee"/>
+                <constraint firstItem="lEv-9A-gmU" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="8" id="LUG-LN-fKk"/>
+                <constraint firstItem="qV7-EG-KxK" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Vhd-CR-fRs"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="bi3-Mg-IYU" secondAttribute="bottom" constant="20" id="aah-dR-h75"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="qV7-EG-KxK" secondAttribute="trailing" id="bgA-4a-0dg"/>
+                <constraint firstAttribute="bottom" secondItem="qV7-EG-KxK" secondAttribute="bottom" id="f5k-QZ-IGW"/>
+                <constraint firstItem="qV7-EG-KxK" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="qYu-N1-CYS"/>
+                <constraint firstItem="bi3-Mg-IYU" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="1" id="zo7-iV-Kc2"/>
+            </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="47.826086956521742" y="65.625"/>
+        </view>
+    </objects>
+</document>
