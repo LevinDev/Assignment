@@ -10,10 +10,9 @@ import UIKit
 
 
 class StreamFullScreenController: UIViewController {
-    
+     // MARK: - IBOutlet
     @IBOutlet var btnClose: UIButton!
     @IBOutlet weak var collectionView: UICollectionView!
-    
     @IBOutlet weak var fullscreenPlayerView: VideoFullscreenPlayerView!
     
    var viewModel: StreamViewModel!
@@ -37,16 +36,30 @@ class StreamFullScreenController: UIViewController {
         return vc
         
     }
-
+    // MARK: - ViewController Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         self.collectionView.register(UINib(nibName: "StreamCollectionCell", bundle: nil), forCellWithReuseIdentifier: "StreamCollectionCell")
     }
-
+   // MARK: - IBActions
     @IBAction func tapClose(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func hideControls(_ sender: UIButton) {
+        if sender.titleLabel?.text == "HideControls" {
+            sender.setTitle("ShowControls", for: .normal)
+            hideControls(true)
+        } else {
+             sender.setTitle("HideControls", for: .normal)
+             hideControls(false)
+        }
+    }
+    
+    func hideControls(_ val : Bool) {
+        self.btnClose.isHidden = val
+        self.collectionView.isHidden = val
+    }
 }
 
 extension StreamFullScreenController: UICollectionViewDataSource, UICollectionViewDelegate {

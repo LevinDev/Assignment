@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  HomeViewController.swift
 //  VideoStreamingLevin
 //
 //  Created by Levin Varghese on 11/24/19.
@@ -10,21 +10,23 @@ import UIKit
 import AVKit
 
 class HomeViewController: UIViewController {
-
+     // MARK: - IBOutlet
     @IBOutlet weak var streamListTableView: UITableView?
     var viewModel: StreamViewModel = StreamViewModel()
     
+     // MARK: - ViewController life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-   
+    
+    // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let destination: DetailViewController = segue.destination as? DetailViewController else {return}
         destination.viewModel = self.viewModel
     }
 
 }
-
+// MARK: - UITableview dataSource and delegates
 extension HomeViewController : UITableViewDataSource,UITableViewDelegate {
     
     func numberOfSections(in tableView: UITableView) -> Int {

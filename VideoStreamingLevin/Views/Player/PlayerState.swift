@@ -10,8 +10,11 @@ import Foundation
 
 enum PlayerState {
     case readyToPlay
+    case playing
+    case paused
     case failed
     case playbackEndend
+    case none
 }
 
 enum PlayerAction {

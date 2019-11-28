@@ -15,8 +15,9 @@
 		A41BA843238C312100CD8581 /* StreamFullScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41BA841238C312100CD8581 /* StreamFullScreenController.swift */; };
 		A41BA844238C312100CD8581 /* StreamFullScreenController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A41BA842238C312100CD8581 /* StreamFullScreenController.xib */; };
 		A41BA846238F13E500CD8581 /* StreamCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A41BA845238F13E500CD8581 /* StreamCollectionCell.xib */; };
+		A41BA84F238FA0BE00CD8581 /* UIView+TapGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41BA84E238FA0BE00CD8581 /* UIView+TapGesture.swift */; };
 		BB8D53D0238A8C2400C0F8E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8D53CF238A8C2400C0F8E5 /* AppDelegate.swift */; };
-		BB8D53D2238A8C2400C0F8E5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8D53D1238A8C2400C0F8E5 /* ViewController.swift */; };
+		BB8D53D2238A8C2400C0F8E5 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8D53D1238A8C2400C0F8E5 /* HomeViewController.swift */; };
 		BB8D53D5238A8C2400C0F8E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB8D53D3238A8C2400C0F8E5 /* Main.storyboard */; };
 		BB8D53D7238A8C2600C0F8E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB8D53D6238A8C2600C0F8E5 /* Assets.xcassets */; };
 		BB8D53DA238A8C2600C0F8E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB8D53D8238A8C2600C0F8E5 /* LaunchScreen.storyboard */; };
@@ -48,9 +49,10 @@
 		A41BA841238C312100CD8581 /* StreamFullScreenController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamFullScreenController.swift; sourceTree = "<group>"; };
 		A41BA842238C312100CD8581 /* StreamFullScreenController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StreamFullScreenController.xib; sourceTree = "<group>"; };
 		A41BA845238F13E500CD8581 /* StreamCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StreamCollectionCell.xib; sourceTree = "<group>"; };
+		A41BA84E238FA0BE00CD8581 /* UIView+TapGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+TapGesture.swift"; sourceTree = "<group>"; };
 		BB8D53CC238A8C2400C0F8E5 /* VideoStreamingLevin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VideoStreamingLevin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB8D53CF238A8C2400C0F8E5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BB8D53D1238A8C2400C0F8E5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BB8D53D1238A8C2400C0F8E5 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		BB8D53D4238A8C2400C0F8E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BB8D53D6238A8C2600C0F8E5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BB8D53D9238A8C2600C0F8E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -108,6 +110,65 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		A41BA847238F9DEE00CD8581 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				BB8D53F3238A9FFE00C0F8E5 /* StreamThumbnailGenerator.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		A41BA848238F9E0000CD8581 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				BB8D53F1238A953600C0F8E5 /* StreamListCell.swift */,
+				A41BA845238F13E500CD8581 /* StreamCollectionCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		A41BA849238F9E1200CD8581 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BB8D53D1238A8C2400C0F8E5 /* HomeViewController.swift */,
+				BB8D53F5238AB2BD00C0F8E5 /* DetailViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		A41BA84A238F9F1700CD8581 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				BB8D53CF238A8C2400C0F8E5 /* AppDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		A41BA84B238F9F4000CD8581 /* StoryBoard */ = {
+			isa = PBXGroup;
+			children = (
+				BB8D53D3238A8C2400C0F8E5 /* Main.storyboard */,
+				BB8D53D8238A8C2600C0F8E5 /* LaunchScreen.storyboard */,
+			);
+			path = StoryBoard;
+			sourceTree = "<group>";
+		};
+		A41BA84C238F9F7500CD8581 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				BB8D53D6238A8C2600C0F8E5 /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		A41BA84D238FA0A400CD8581 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				A41BA84E238FA0BE00CD8581 /* UIView+TapGesture.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		BB8D53C3238A8C2400C0F8E5 = {
 			isa = PBXGroup;
 			children = (
@@ -129,17 +190,16 @@
 		BB8D53CE238A8C2400C0F8E5 /* VideoStreamingLevin */ = {
 			isa = PBXGroup;
 			children = (
+				A41BA84D238FA0A400CD8581 /* Extension */,
+				A41BA84A238F9F1700CD8581 /* App */,
+				A41BA84B238F9F4000CD8581 /* StoryBoard */,
+				A41BA847238F9DEE00CD8581 /* Helper */,
 				A41BA837238AEC7700CD8581 /* Protocols */,
 				A41BA834238AEBDC00CD8581 /* Model */,
-				BB8D53F3238A9FFE00C0F8E5 /* StreamThumbnailGenerator.swift */,
 				BB8D53EF238A950200C0F8E5 /* Views */,
 				A41BA83A238AEDC300CD8581 /* ViewModel */,
-				BB8D53CF238A8C2400C0F8E5 /* AppDelegate.swift */,
-				BB8D53D1238A8C2400C0F8E5 /* ViewController.swift */,
-				BB8D53F5238AB2BD00C0F8E5 /* DetailViewController.swift */,
-				BB8D53D3238A8C2400C0F8E5 /* Main.storyboard */,
-				BB8D53D6238A8C2600C0F8E5 /* Assets.xcassets */,
-				BB8D53D8238A8C2600C0F8E5 /* LaunchScreen.storyboard */,
+				A41BA849238F9E1200CD8581 /* Controller */,
+				A41BA84C238F9F7500CD8581 /* Assets */,
 				BB8D53DB238A8C2600C0F8E5 /* Info.plist */,
 			);
 			path = VideoStreamingLevin;
@@ -157,9 +217,8 @@
 		BB8D53EF238A950200C0F8E5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A41BA848238F9E0000CD8581 /* Cells */,
 				BBBEBAC0238BC40300E888D1 /* Player */,
-				BB8D53F1238A953600C0F8E5 /* StreamListCell.swift */,
-				A41BA845238F13E500CD8581 /* StreamCollectionCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -287,9 +346,10 @@
 				BB8D53F4238A9FFE00C0F8E5 /* StreamThumbnailGenerator.swift in Sources */,
 				A41BA836238AEC1B00CD8581 /* Stream.swift in Sources */,
 				A41BA840238C2FF100CD8581 /* VideoFullscreenPlayerView.swift in Sources */,
-				BB8D53D2238A8C2400C0F8E5 /* ViewController.swift in Sources */,
+				BB8D53D2238A8C2400C0F8E5 /* HomeViewController.swift in Sources */,
 				BB8D53F6238AB2BD00C0F8E5 /* DetailViewController.swift in Sources */,
 				BBBEBAC2238BC46400E888D1 /* LVPlayer.swift in Sources */,
+				A41BA84F238FA0BE00CD8581 /* UIView+TapGesture.swift in Sources */,
 				BB8D53F2238A953600C0F8E5 /* StreamListCell.swift in Sources */,
 				A41BA839238AECA300CD8581 /* CellProtocols.swift in Sources */,
 				BB8D53D0238A8C2400C0F8E5 /* AppDelegate.swift in Sources */,

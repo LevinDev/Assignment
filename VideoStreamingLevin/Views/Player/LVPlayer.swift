@@ -21,11 +21,11 @@ class LVPlayer: UIView {
     @IBOutlet weak var thumbnailView: UIImageView!
     
     var timeObserver: Any?
-    var videoUrl: URL = URL(string: "https://content.jwplatform.com/manifests/yp34SRmf.m3u8")!
     var player: AVPlayer?
     var playerLayer: AVPlayerLayer = AVPlayerLayer()
     var currentItem: AVPlayerItem?
     var playerAction: ((_ action: PlayerAction) -> Void )?
+    var playerState: PlayerState = .none
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -76,6 +76,8 @@ class LVPlayer: UIView {
         self.enableControls(val: false)
         self.controlView.layer.zPosition = 1
         self.activityIndicator.layer.zPosition = 2
+        self.handleTapGesture()
+        
     }
     
     func play(url: String) {
@@ -119,6 +121,19 @@ class LVPlayer: UIView {
         }
     }
     
+    func handleTapGesture() {
+        self.view.addTapGestureRecognizer { [weak self] in
+            guard let StrongSelf = self else { return }
+            switch StrongSelf.playerState {
+            case .playing:
+            self?.controlView.isHidden = self?.controlView.isHidden ?? false ? false : true
+            default: break
+            }
+           
+            
+        }
+    }
+    
     // MARK: - IBActions
     @IBAction func playbackSliderValueChanged(_ sender:UISlider)
     {
@@ -131,11 +146,13 @@ class LVPlayer: UIView {
     @IBAction func playPauseTapped(_ sender: UIButton) {
         guard let player = player else { return }
         if !player.isPlaying {
+            self.playerState = .playing
             player.play()
             playPauseButton?.setImage(UIImage(named: "pause"), for: .normal)
         } else {
             playPauseButton?.setImage(UIImage(named: "play"), for: .normal)
             player.pause()
+            self.playerState = .paused
         }
     }
     
@@ -148,6 +165,14 @@ class LVPlayer: UIView {
 
 extension LVPlayer {
     
+    
+    // MARK: - Helper
+    func enableControls(val: Bool) {
+        self.playPauseButton?.isEnabled = val
+        self.progressSlider.isEnabled = val
+        self.expand?.isEnabled = val
+    }
+    // MARK: - KVO
     private func addObserverPlayerItem()
     {
         if let playerItem = self.player?.currentItem{
@@ -159,13 +184,6 @@ extension LVPlayer {
             self.currentItem = playerItem
         }
     }
-    
-    func enableControls(val: Bool) {
-        self.playPauseButton?.isEnabled = val
-        self.progressSlider.isEnabled = val
-        self.expand?.isEnabled = val
-    }
-    
     override public func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
         if object is AVPlayerItem {
             switch keyPath {
@@ -189,7 +207,7 @@ extension LVPlayer {
                 
                 // Switch over status value
                 switch status {
-                case .readyToPlay: break
+                case .readyToPlay:
                 self.enableControls(val: true)
                 case .failed: break
                 // Player item failed. See error.

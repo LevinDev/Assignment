@@ -40,6 +40,17 @@
                         <action selector="tapClose:" destination="-1" eventType="touchUpInside" id="dsy-mA-Kcn"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h8F-8Z-VNw">
+                    <rect key="frame" x="299" y="103" width="100" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="AEB-rF-vRG"/>
+                        <constraint firstAttribute="width" constant="100" id="TgF-4D-N2x"/>
+                    </constraints>
+                    <state key="normal" title="HideControls"/>
+                    <connections>
+                        <action selector="hideControls:" destination="-1" eventType="touchUpInside" id="134-I6-Zcp"/>
+                    </connections>
+                </button>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="bi3-Mg-IYU">
                     <rect key="frame" x="1" y="714" width="412" height="128"/>
                     <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -62,6 +73,8 @@
             <constraints>
                 <constraint firstItem="lEv-9A-gmU" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="0cR-Lg-chd"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="bi3-Mg-IYU" secondAttribute="trailing" constant="1" id="9Cf-3D-Yee"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="h8F-8Z-VNw" secondAttribute="trailing" constant="15" id="9pY-aD-787"/>
+                <constraint firstItem="h8F-8Z-VNw" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="15" id="J92-Tg-ozS"/>
                 <constraint firstItem="lEv-9A-gmU" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="8" id="LUG-LN-fKk"/>
                 <constraint firstItem="qV7-EG-KxK" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Vhd-CR-fRs"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="bi3-Mg-IYU" secondAttribute="bottom" constant="20" id="aah-dR-h75"/>
