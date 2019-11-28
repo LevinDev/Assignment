@@ -122,17 +122,26 @@ class LVPlayer: UIView {
     }
     
     func handleTapGesture() {
-        self.view.addTapGestureRecognizer { [weak self] in
+        self.view.superview?.addTapGestureRecognizer { [weak self] in
             guard let StrongSelf = self else { return }
             switch StrongSelf.playerState {
             case .playing:
             self?.controlView.isHidden = self?.controlView.isHidden ?? false ? false : true
             default: break
             }
-           
-            
+        }
+        
+        Timer.every(20.0.seconds) { [weak self] in
+            guard let StrongSelf = self else { return }
+            switch StrongSelf.playerState {
+            case .playing:
+                self?.controlView.isHidden = true
+            default: break
+            }
         }
     }
+    
+
     
     // MARK: - IBActions
     @IBAction func playbackSliderValueChanged(_ sender:UISlider)
@@ -182,7 +191,18 @@ extension LVPlayer {
             self.player?.addObserver(self, forKeyPath: #keyPath(AVPlayer.currentItem.status), options: [.new, .initial], context: nil)
             self.player?.addObserver(self, forKeyPath: #keyPath(AVPlayer.status), options: [.new, .initial], context: nil)
             self.currentItem = playerItem
+            NotificationCenter.default.addObserver(self,
+                                                   selector: #selector(playerItemDidReachEnd),
+                                                   name: NSNotification.Name.AVPlayerItemDidPlayToEndTime,
+                                                   object: nil)
         }
+    }
+    @objc func playerItemDidReachEnd(notification: NSNotification) {
+        self.player?.seek(to: CMTime.zero)
+        self.playerState = .playbackEndend
+        self.playPauseTapped(self.playPauseButton ?? UIButton())
+        self.controlView.isHidden = false
+        
     }
     override public func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
         if object is AVPlayerItem {

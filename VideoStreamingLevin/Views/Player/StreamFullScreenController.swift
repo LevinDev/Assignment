@@ -21,12 +21,12 @@ class StreamFullScreenController: UIViewController {
         loadViewIfNeeded()
         _ = self.view
         let transition = VideoFullscreenTransitioner()
-        transition.fullscreenControls = [self.btnClose]
+        transition.fullscreenControls = [self.btnClose,self.collectionView]
         transition.fullscreenPlayerView = fullscreenPlayerView
         transition.fullscreenVideoGravity = .resizeAspect
         return transition
     }()
-    
+     // MARK: - Dependency Injection
     static func intialize(model: StreamViewModel, player: LVPlayer) -> StreamFullScreenController{
         let vc = StreamFullScreenController(nibName: "StreamFullScreenController", bundle: nil)
         vc.viewModel = model
@@ -61,7 +61,7 @@ class StreamFullScreenController: UIViewController {
         self.collectionView.isHidden = val
     }
 }
-
+// MARK: - UICollectionView datasource delegates
 extension StreamFullScreenController: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
       return  viewModel?.streamList.count ?? 0

@@ -16,6 +16,7 @@
 		A41BA844238C312100CD8581 /* StreamFullScreenController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A41BA842238C312100CD8581 /* StreamFullScreenController.xib */; };
 		A41BA846238F13E500CD8581 /* StreamCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A41BA845238F13E500CD8581 /* StreamCollectionCell.xib */; };
 		A41BA84F238FA0BE00CD8581 /* UIView+TapGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41BA84E238FA0BE00CD8581 /* UIView+TapGesture.swift */; };
+		A41BA851238FBB3300CD8581 /* Timer+CallBack.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41BA850238FBB3300CD8581 /* Timer+CallBack.swift */; };
 		BB8D53D0238A8C2400C0F8E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8D53CF238A8C2400C0F8E5 /* AppDelegate.swift */; };
 		BB8D53D2238A8C2400C0F8E5 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8D53D1238A8C2400C0F8E5 /* HomeViewController.swift */; };
 		BB8D53D5238A8C2400C0F8E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB8D53D3238A8C2400C0F8E5 /* Main.storyboard */; };
@@ -50,6 +51,7 @@
 		A41BA842238C312100CD8581 /* StreamFullScreenController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StreamFullScreenController.xib; sourceTree = "<group>"; };
 		A41BA845238F13E500CD8581 /* StreamCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StreamCollectionCell.xib; sourceTree = "<group>"; };
 		A41BA84E238FA0BE00CD8581 /* UIView+TapGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+TapGesture.swift"; sourceTree = "<group>"; };
+		A41BA850238FBB3300CD8581 /* Timer+CallBack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Timer+CallBack.swift"; sourceTree = "<group>"; };
 		BB8D53CC238A8C2400C0F8E5 /* VideoStreamingLevin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VideoStreamingLevin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB8D53CF238A8C2400C0F8E5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BB8D53D1238A8C2400C0F8E5 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				A41BA84E238FA0BE00CD8581 /* UIView+TapGesture.swift */,
+				A41BA850238FBB3300CD8581 /* Timer+CallBack.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -344,6 +347,7 @@
 				BBBEBAC6238BE0C300E888D1 /* PlayerState.swift in Sources */,
 				A41BA83C238AEE9500CD8581 /* StreamViewModel.swift in Sources */,
 				BB8D53F4238A9FFE00C0F8E5 /* StreamThumbnailGenerator.swift in Sources */,
+				A41BA851238FBB3300CD8581 /* Timer+CallBack.swift in Sources */,
 				A41BA836238AEC1B00CD8581 /* Stream.swift in Sources */,
 				A41BA840238C2FF100CD8581 /* VideoFullscreenPlayerView.swift in Sources */,
 				BB8D53D2238A8C2400C0F8E5 /* HomeViewController.swift in Sources */,
