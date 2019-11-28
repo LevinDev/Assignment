@@ -29,7 +29,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="149.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nbJ-U1-4Wz">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeHolder" translatesAutoresizingMaskIntoConstraints="NO" id="nbJ-U1-4Wz">
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="149.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="149.5" id="FBj-ee-vEa"/>
@@ -153,4 +153,7 @@
             <point key="canvasLocation" x="151" y="134"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="placeHolder" width="1280" height="721"/>
+    </resources>
 </document>
