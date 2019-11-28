@@ -32,6 +32,7 @@ class DetailViewController: UIViewController {
         currentModel.getThumbnail { [weak self] (image) in
             self?.playerView.thumbnailView.image = image
         }
+        self.navigationController?.delegate = self
         setupVideoPlayer(url: currentModel.url)
     }
     
@@ -54,4 +55,14 @@ class DetailViewController: UIViewController {
         present(vc, animated: true, completion: nil)
     }
     
+}
+
+extension DetailViewController: UINavigationControllerDelegate {
+    func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
+        guard let _ = viewController as? HomeViewController else { return}
+        self.playerView.pause()
+        self.playerView.playerLayer.removeFromSuperlayer()
+        self.playerView = nil
+       
+    }
 }

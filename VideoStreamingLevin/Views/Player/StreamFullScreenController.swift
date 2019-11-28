@@ -84,6 +84,7 @@ class StreamFullScreenController: UIViewController {
     func hideControls(_ val : Bool) {
         self.btnClose.isHidden = val
         self.collectionView.isHidden = val
+        self.playBackButton.isHidden = val
     }
     func setPlaybackButton() {
         guard let state = self.transitioner.playerView?.playerState else { return }
