@@ -54,13 +54,4 @@ class DetailViewController: UIViewController {
         present(vc, animated: true, completion: nil)
     }
     
-
-}
-
-
-
-extension AVPlayer {
-    var isPlaying: Bool {
-        return rate != 0 && error == nil
-    }
 }

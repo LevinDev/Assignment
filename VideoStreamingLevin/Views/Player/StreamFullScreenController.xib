@@ -15,6 +15,7 @@
                 <outlet property="btnClose" destination="lEv-9A-gmU" id="Bz7-18-Zmi"/>
                 <outlet property="collectionView" destination="bi3-Mg-IYU" id="y1i-tr-LRE"/>
                 <outlet property="fullscreenPlayerView" destination="qV7-EG-KxK" id="0Dc-R6-k9R"/>
+                <outlet property="playBackButton" destination="2MY-FM-60y" id="mBz-xj-LYp"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -38,6 +39,13 @@
                     </state>
                     <connections>
                         <action selector="tapClose:" destination="-1" eventType="touchUpInside" id="dsy-mA-Kcn"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2MY-FM-60y">
+                    <rect key="frame" x="100" y="103" width="46" height="30"/>
+                    <state key="normal" title="Button"/>
+                    <connections>
+                        <action selector="playbackButtonPressed:" destination="-1" eventType="touchUpInside" id="YKh-eb-NCO"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h8F-8Z-VNw">
@@ -74,8 +82,10 @@
                 <constraint firstItem="lEv-9A-gmU" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="0cR-Lg-chd"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="bi3-Mg-IYU" secondAttribute="trailing" constant="1" id="9Cf-3D-Yee"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="h8F-8Z-VNw" secondAttribute="trailing" constant="15" id="9pY-aD-787"/>
+                <constraint firstItem="2MY-FM-60y" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="15" id="ILU-vq-pCh"/>
                 <constraint firstItem="h8F-8Z-VNw" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="15" id="J92-Tg-ozS"/>
                 <constraint firstItem="lEv-9A-gmU" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="8" id="LUG-LN-fKk"/>
+                <constraint firstItem="2MY-FM-60y" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="100" id="Vg4-KM-GEf"/>
                 <constraint firstItem="qV7-EG-KxK" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Vhd-CR-fRs"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="bi3-Mg-IYU" secondAttribute="bottom" constant="20" id="aah-dR-h75"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="qV7-EG-KxK" secondAttribute="trailing" id="bgA-4a-0dg"/>

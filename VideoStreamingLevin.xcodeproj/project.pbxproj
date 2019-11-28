@@ -17,6 +17,7 @@
 		A41BA846238F13E500CD8581 /* StreamCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A41BA845238F13E500CD8581 /* StreamCollectionCell.xib */; };
 		A41BA84F238FA0BE00CD8581 /* UIView+TapGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41BA84E238FA0BE00CD8581 /* UIView+TapGesture.swift */; };
 		A41BA851238FBB3300CD8581 /* Timer+CallBack.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41BA850238FBB3300CD8581 /* Timer+CallBack.swift */; };
+		A41BA853238FBE1400CD8581 /* AVPlayer+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41BA852238FBE1400CD8581 /* AVPlayer+Helper.swift */; };
 		BB8D53D0238A8C2400C0F8E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8D53CF238A8C2400C0F8E5 /* AppDelegate.swift */; };
 		BB8D53D2238A8C2400C0F8E5 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8D53D1238A8C2400C0F8E5 /* HomeViewController.swift */; };
 		BB8D53D5238A8C2400C0F8E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB8D53D3238A8C2400C0F8E5 /* Main.storyboard */; };
@@ -52,6 +53,7 @@
 		A41BA845238F13E500CD8581 /* StreamCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StreamCollectionCell.xib; sourceTree = "<group>"; };
 		A41BA84E238FA0BE00CD8581 /* UIView+TapGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+TapGesture.swift"; sourceTree = "<group>"; };
 		A41BA850238FBB3300CD8581 /* Timer+CallBack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Timer+CallBack.swift"; sourceTree = "<group>"; };
+		A41BA852238FBE1400CD8581 /* AVPlayer+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AVPlayer+Helper.swift"; sourceTree = "<group>"; };
 		BB8D53CC238A8C2400C0F8E5 /* VideoStreamingLevin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VideoStreamingLevin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB8D53CF238A8C2400C0F8E5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BB8D53D1238A8C2400C0F8E5 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 			children = (
 				A41BA84E238FA0BE00CD8581 /* UIView+TapGesture.swift */,
 				A41BA850238FBB3300CD8581 /* Timer+CallBack.swift */,
+				A41BA852238FBE1400CD8581 /* AVPlayer+Helper.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -359,6 +362,7 @@
 				BB8D53D0238A8C2400C0F8E5 /* AppDelegate.swift in Sources */,
 				A41BA843238C312100CD8581 /* StreamFullScreenController.swift in Sources */,
 				A41BA83F238C2FF100CD8581 /* VideoFullscreenTransitioner.swift in Sources */,
+				A41BA853238FBE1400CD8581 /* AVPlayer+Helper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

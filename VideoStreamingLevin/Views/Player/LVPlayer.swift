@@ -25,7 +25,13 @@ class LVPlayer: UIView {
     var playerLayer: AVPlayerLayer = AVPlayerLayer()
     var currentItem: AVPlayerItem?
     var playerAction: ((_ action: PlayerAction) -> Void )?
-    var playerState: PlayerState = .none
+    var playerStateCallback: ((_ state: PlayerState) -> Void)?
+    var playerState: PlayerState = .none  {
+        willSet {
+          self.playerStateCallback?(newValue)
+        }
+    }
+    private var playerTimeControlStatusObservation: NSKeyValueObservation?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -53,10 +59,7 @@ class LVPlayer: UIView {
         
         return nibView
     }
-    func setupPlayer() {
-        
-    }
-    
+ 
     func setupVideoPlayer(url: String) {
         guard let url = URL(string: url) else {
             return
@@ -155,13 +158,9 @@ class LVPlayer: UIView {
     @IBAction func playPauseTapped(_ sender: UIButton) {
         guard let player = player else { return }
         if !player.isPlaying {
-            self.playerState = .playing
-            player.play()
-            playPauseButton?.setImage(UIImage(named: "pause"), for: .normal)
+            self.play()
         } else {
-            playPauseButton?.setImage(UIImage(named: "play"), for: .normal)
-            player.pause()
-            self.playerState = .paused
+           self.pause()
         }
     }
     
@@ -176,6 +175,18 @@ extension LVPlayer {
     
     
     // MARK: - Helper
+    func play() {
+        self.playerState = .playing
+        player?.play()
+        playPauseButton?.setImage(UIImage(named: "pause"), for: .normal)
+    }
+    
+    func pause() {
+        playPauseButton?.setImage(UIImage(named: "play"), for: .normal)
+        player?.pause()
+        self.playerState = .paused
+    }
+    
     func enableControls(val: Bool) {
         self.playPauseButton?.isEnabled = val
         self.progressSlider.isEnabled = val
@@ -187,6 +198,7 @@ extension LVPlayer {
         if let playerItem = self.player?.currentItem{
             playerItem.addObserver(self, forKeyPath: "playbackBufferEmpty", options: .new, context: nil)
             playerItem.addObserver(self, forKeyPath: "playbackLikelyToKeepUp", options: .new, context: nil)
+            self.player?.addObserver(self, forKeyPath: "rate", options: .new, context: nil)
             playerItem.addObserver(self, forKeyPath: "playbackBufferFull", options: .new, context: nil)
             self.player?.addObserver(self, forKeyPath: #keyPath(AVPlayer.currentItem.status), options: [.new, .initial], context: nil)
             self.player?.addObserver(self, forKeyPath: #keyPath(AVPlayer.status), options: [.new, .initial], context: nil)
@@ -195,6 +207,19 @@ extension LVPlayer {
                                                    selector: #selector(playerItemDidReachEnd),
                                                    name: NSNotification.Name.AVPlayerItemDidPlayToEndTime,
                                                    object: nil)
+            
+            playerTimeControlStatusObservation = self.player?.observe(\.timeControlStatus) { [unowned self] player, _ in
+                switch player.timeControlStatus {
+                case .paused:
+                    self.playerState = .paused
+                case .waitingToPlayAtSpecifiedRate:
+                    break
+                case .playing:
+                   self.playerState = .playing
+                @unknown default:
+                    break
+                }
+            }
         }
     }
     @objc func playerItemDidReachEnd(notification: NSNotification) {
@@ -216,6 +241,11 @@ extension LVPlayer {
             case "playbackBufferFull":
                 self.activityIndicator?.stopAnimating()
                  self.enableControls(val: true)
+            case #keyPath(AVPlayer.rate):
+                if player?.timeControlStatus == .playing {
+                    self.playerState = . playing
+                }
+               
             case #keyPath(AVPlayer.currentItem.status):
                 
                 let status: AVPlayerItem.Status
@@ -230,9 +260,7 @@ extension LVPlayer {
                 case .readyToPlay:
                 self.enableControls(val: true)
                 case .failed: break
-                // Player item failed. See error.
                 case .unknown: break
-                    // Player item is not yet ready.
                 @unknown default:
                     break
                 }

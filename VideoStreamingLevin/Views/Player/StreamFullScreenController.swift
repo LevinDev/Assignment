@@ -14,8 +14,10 @@ class StreamFullScreenController: UIViewController {
     @IBOutlet var btnClose: UIButton!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var fullscreenPlayerView: VideoFullscreenPlayerView!
+    @IBOutlet weak var playBackButton: UIButton!
     
    var viewModel: StreamViewModel!
+    var player: LVPlayer?
 
     lazy var transitioner: VideoFullscreenTransitioner = {
         loadViewIfNeeded()
@@ -33,6 +35,9 @@ class StreamFullScreenController: UIViewController {
         vc.modalPresentationStyle = .fullScreen
         vc.transitioner.playerView = player
         vc.transitioningDelegate = vc.transitioner
+        vc.setPlaybackButton()
+        vc.observePlayerState()
+        vc.player = player
         return vc
         
     }
@@ -40,6 +45,19 @@ class StreamFullScreenController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.collectionView.register(UINib(nibName: "StreamCollectionCell", bundle: nil), forCellWithReuseIdentifier: "StreamCollectionCell")
+    }
+    // MARK: -  Observer
+    func observePlayerState() {
+        self.transitioner.playerView?.playerStateCallback = {[weak self] state in
+            switch state {
+            case .playing:
+               self?.playBackButton.setTitle("Pause", for: .normal)
+            case .paused:
+                self?.playBackButton.setTitle("Play", for: .normal)
+            default:break
+                
+            }
+        }
     }
    // MARK: - IBActions
     @IBAction func tapClose(_ sender: UIButton) {
@@ -55,10 +73,28 @@ class StreamFullScreenController: UIViewController {
              hideControls(false)
         }
     }
-    
+    @IBAction func playbackButtonPressed(_ sender: UIButton) {
+        if sender.titleLabel?.text == "Play" {
+            self.player?.play()
+        } else {
+            self.player?.pause()
+        }
+    }
+     // MARK:- Helper
     func hideControls(_ val : Bool) {
         self.btnClose.isHidden = val
         self.collectionView.isHidden = val
+    }
+    func setPlaybackButton() {
+        guard let state = self.transitioner.playerView?.playerState else { return }
+        switch state {
+        case .playing:
+            self.playBackButton.setTitle("Pause", for: .normal)
+        case .paused,.none:
+            self.playBackButton.setTitle("Play", for: .normal)
+        default: break
+            
+        }
     }
 }
 // MARK: - UICollectionView datasource delegates
